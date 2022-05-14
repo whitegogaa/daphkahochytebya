@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML5 и CSS3 сайт</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+ <header>
+  <div id="logo" onclick="slowScroll('#top')">
+    <span>daryahochutebya</span>
+  </div>
+  <div id="about">
+    <a href="#" title="Почему я" onclick="slowScroll('#main')">Почему я</a>
+
+  </div>
+ </header>
+
+
+div <div id="top">
+  <h1>Ну наебал я насчет билетов</h1>
+  <h3>И что?</h3>
+</div>
+
+<div id="main">
+  <div class="intro">
+    <h2>Давай ко мне, у меня квартирка свободна</h2>
+    <span>Весна ща, чешется жеско</span>
+  </div>
+  <div class="text">
+    <span></span>
+  </div>
+</div>
+
+<div id="overview">
+  <h2>Почему я</h2>
+  <h4>Хз нормальный тип вроде</h4>
+
+  <div class="img">
+    <img src="https://i.ibb.co/W5m7XnV/photo-2022-05-14-17-25-00.jpg" alt="">
+    <span>поваренок)</span>
+    </div>
+    <div class="img">
+      <img src="https://i.ibb.co/Y03LpzW/photo-2022-05-14-17-29-22.jpg" alt="">
+      <span>спорстмэн</span>
+      </div>
+      <div class="img">
+        <img src="https://i.ibb.co/G5ssdpX/photo-2022-05-14-17-25-01.jpg" alt="">
+        <span>люблю животных)</span>
+        </div>
+        <div class="img">
+          <img src="https://i.ibb.co/p08qzxb/photo-2022-05-14-17-25-02.jpg" alt="">
+          <span>ну это не мои</span>
+          </div>
+</div>
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script>
+   function slowScroll(id) {
+    $('html, body').animate({
+       scrollTop: $(id).offset().top
+    }, 500);
+   }
+
+
+   $(document).on("scroll", function () {
+     if($(window).scrollTop() === 0)
+     $("header").removeClass("fixed");
+     else
+     $("header").attr("class","fixed");
+   });
+ </script>
+</body>
+</html>
